@@ -1,18 +1,22 @@
 # Getting Started
 
+copy environment variables from `.env.example` to a new file in your root directory called `.env`
+run `npm i`
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3005](http://localhost:3005) to view it in the browser.
+Runs the app in the development mode.
+Open [http://localhost:4444](http://localhost:4444) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npx playwright test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the playwright test runner in `headless` mode. Open `playwright.config.js` and change `headless: false` to run in 'headed' mode to see browser actions.
+Alternatively, you can add this flag to your test command `npx playwright test --headed`
+Note: any screenshots you make in headed vs headless mode will have conflicts when comparing them back. It's typically best practice to run all your screenshot tests in headless mode.
