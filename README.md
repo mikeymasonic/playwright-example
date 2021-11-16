@@ -1,6 +1,6 @@
 # Getting Started
 
-copy environment variables from `.env.example` to a new file in your root directory called `.env`
+copy environment variables from `.env.example` to a new file in your root directory called `.env`\
 run `npm i`
 
 ## Available Scripts
@@ -17,6 +17,7 @@ You will also see any lint errors in the console.
 
 ### `npx playwright test`
 
-Launches the playwright test runner in `headless` mode. Open `playwright.config.js` and change `headless: false` to run in 'headed' mode to see browser actions.
+Launches the playwright test runner in `headless` mode. Open `playwright.config.js` and change `headless: false` to run in 'headed' mode to see browser actions.\
 Alternatively, you can add this flag to your test command `npx playwright test --headed`
+
 Note: any screenshots you make in headed vs headless mode will have conflicts when comparing them back. It's typically best practice to run all your screenshot tests in headless mode.
