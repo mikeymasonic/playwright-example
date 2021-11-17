@@ -30,8 +30,8 @@ Note: any screenshots you make in headed vs headless mode will have conflicts wh
 
 ### Mikey Contact Links
 
-[My super cool dev site](https://michaelromay.dev)
-Where I work: [Niche.com](https://niche.com)
-[LinkedIn](https://www.linkedin.com/in/michaelromay)
-[SynthLibraryPortland](https://synthlibraryportland.com)
-[whateverSpace](http://whateverspace.org)
+[My super cool dev site](https://michaelromay.dev)\
+Where I work: [Niche.com](https://niche.com)\
+[LinkedIn](https://www.linkedin.com/in/michaelromay)\
+[SynthLibraryPortland](https://synthlibraryportland.com)\
+[whateverSpace](http://whateverspace.org)\
