@@ -22,3 +22,16 @@ Open `playwright.config.js` and change `headless: false` to run in 'headed' mode
 Alternatively, you can add this flag to your test command `npx playwright test --headed`
 
 Note: any screenshots you make in headed vs headless mode will have conflicts when comparing them back. It's typically best practice to run all your screenshot tests in headless mode.
+
+### Helpful links
+
+[https://playwright.dev/docs/intro](Playwright Docs)
+[https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda](Headless Recorder Chrome Extension)
+
+### Mikey Contact Links
+
+[https://michaelromay.dev](My super cool dev site)
+Where I work: [https://niche.com](Niche.com)
+[https://www.linkedin.com/in/michaelromay/](LinkedIn)
+[https://synthlibraryportland.com/](SynthLibraryPortland)
+[http://whateverspace.org/](whateverSpace)

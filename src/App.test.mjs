@@ -8,6 +8,7 @@ const selectors = {
   appTitle: '.App-title',
   archiveAbout: 'text=About',
 }
+
 const url = process.env.ENV_URL
 
 test.describe('main page', () => {
@@ -27,7 +28,7 @@ test.describe('main page', () => {
     });
 
     test('page has correct number of links', async ({ page }) => {
-      const selectorCount = await page.$$('.App-link');
+      const selectorCount = await page.$$(selectors.appLinks);
       expect(selectorCount.length).toBe(2);
     });
 
@@ -45,10 +46,38 @@ test.describe('main page', () => {
 
     test('first link on page has correct url', async ({ page }) => {
       const linkHref = await page.getAttribute(
-        selectors.appLink({ childNumber: 3}), 
+        selectors.appLink({ childNumber: 2}), 
         'href'
         );
         expect(linkHref).toEqual('https://duckduckgo.com');
+    });
+
+    test('all links on page have correct urls and text', async ({ page }) => {
+      const urls = [
+        {
+          childNumber: 2,
+          url: 'https://duckduckgo.com',
+          text: 'link to search engine',
+        },
+        {
+          childNumber: 4,
+          url: 'https://archive.org',
+          text: 'link to archive.org',
+        },
+      ];
+  
+      for (let i = 0; i < urls.length; i++) {
+        const element = await page.$(
+          selectors.appLink({ childNumber: urls[i].childNumber})
+        );
+        const content = await element.textContent();
+        expect(content).toBe(`${urls[i].text}`);
+        const linkHref = await page.getAttribute(
+          selectors.appLink({ childNumber: urls[i].childNumber}),
+          'href'
+        );
+        expect(linkHref).toEqual(`${urls[i].url}`);
+      }
     });
 
     test('main page matches snapshot', async ({ page }) => {
@@ -63,7 +92,7 @@ test.describe('main page', () => {
         // The promise resolves after navigation has finished
         page.waitForNavigation(),
         // Clicking the link will indirectly cause a navigation
-        page.click(selectors.appLink({ childNumber: 3})), 
+        page.click(selectors.appLink({ childNumber: 2})), 
       ]);
       expect(await page.screenshot()).toMatchSnapshot('duckduck.png');
     });
@@ -78,7 +107,6 @@ test.describe('main page', () => {
       expect(await page.screenshot()).toMatchSnapshot('archiveorg.png');
     });
 
-
     test('archive.org goes to about link', async ({ page }) => {
       await Promise.all([
         // The promise resolves after navigation has finished
@@ -89,38 +117,5 @@ test.describe('main page', () => {
       await page.click(selectors.archiveAbout);
       expect(await page.screenshot()).toMatchSnapshot('archiveorgAbout.png');
     });
-
   });
 });
-
-
-
-
-// test('all links on page have correct urls', async ({ page }) => {
-//   const urls = [
-//     {
-//       childNumber: 3,
-//       url: 'https://duckduckgo.com',
-//       text: 'link to search engine',
-//     },
-//     {
-//       childNumber: 4,
-//       url: 'https://archive.org',
-//       text: 'link to archive.org',
-//     },
-//   ];
-//   for (let i = 0; i < urls.length; i+=1) {
-//     const element = await page.$(
-//       `.App-link:nth-child(${urls[i].childNumber})`
-//     );
-//     const content = await element.textContent();
-//     expect(content).toBe(`${urls[i].text}`);
-//     // const linkHref = await page.getAttribute(
-//     //   '.App-link:nth-child(3)',
-//     //   'href'
-//     // );
-//     // expect(linkHref).toEqual(`${urls[i].url}`);
-//   }
-
-
-// });

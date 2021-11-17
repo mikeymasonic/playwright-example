@@ -18,8 +18,15 @@ function App() {
   };
 
   const handleClickRed = () => {
-    const body = document.body; // accessing body element
-    body.style.background = 'red'; // changing color to red
+    setTimeout(() => {
+      const newElement = document.createElement('div');
+      newElement.style.color = 'purple';
+      newElement.classList.add('New-thing');
+      newElement.textContent = 'This is a thing I just created';
+      document.getElementById('thing').append(newElement);
+      const body = document.body; // accessing body element
+      body.style.background = 'red'; // changing color to red
+    }, 5000);
   };
 
   const handleClickTeal = () => {
@@ -31,7 +38,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={birbs} className="App-logo" alt="logo" />
-
+        <div id='thing'>
+         
         <p className="App-title">
          Hello, I am react app, welcome
         </p>
@@ -42,45 +50,48 @@ function App() {
         >
           link to search engine
         </a>
+        <br />
         <a
           className="App-link"
           href="https://archive.org"
         >
           link to archive.org
         </a>
+        <br />
 
         <button 
           onClick={handleClickGreen} 
-          className="greenButton">
+          className="green-button">
           green
         </button>
 
         <button 
           onClick={handleClickPurple} 
-          className="purpleButton">
+          className="purple-button">
           purple
         </button>
 
         <button 
           onClick={handleClickOrange} 
-          className="orangeButton"
+          className="orange-button"
         >
           orange
         </button>
 
         <button 
           onClick={handleClickRed} 
-          className="redButton"
+          className="red-button"
         >
           red
         </button>
 
         <button 
           onClick={handleClickTeal} 
-          className="tealButton"
+          className="teal-button"
         >
           teal
         </button>
+      </div>
       </header>
     </div>
     )
