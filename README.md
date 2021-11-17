@@ -28,7 +28,7 @@ Note: any screenshots you make in headed vs headless mode will have conflicts wh
 ### Helpful links
 
 [Playwright Docs](https://playwright.dev/docs/intro)\
-[Headless Recorder Chrome Extension](https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda)\
+[Headless Recorder Chrome Extension](https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda)
 
 ### Mikey Contact Links
 
