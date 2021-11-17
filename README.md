@@ -17,6 +17,8 @@ You will also see any lint errors in the console.
 
 ### `npx playwright test`
 
+### `npx playwright test --update-snapshots`
+
 Launches the playwright test runner in `headless` mode. \
 Open `playwright.config.js` and change `headless: false` to run in 'headed' mode to see browser actions.\
 Alternatively, you can add this flag to your test command `npx playwright test --headed`
@@ -34,4 +36,4 @@ Note: any screenshots you make in headed vs headless mode will have conflicts wh
 Where I work: [Niche.com](https://niche.com)\
 [LinkedIn](https://www.linkedin.com/in/michaelromay)\
 [SynthLibraryPortland](https://synthlibraryportland.com)\
-[whateverSpace](http://whateverspace.org)\
+[whateverSpace](http://whateverspace.org)
