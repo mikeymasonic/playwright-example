@@ -25,13 +25,13 @@ Note: any screenshots you make in headed vs headless mode will have conflicts wh
 
 ### Helpful links
 
-[https://playwright.dev/docs/intro](Playwright Docs)
-[https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda](Headless Recorder Chrome Extension)
+[Playwright Docs](https://playwright.dev/docs/intro)
+[Headless Recorder Chrome Extension](https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda)
 
 ### Mikey Contact Links
 
-[https://michaelromay.dev](My super cool dev site)
-Where I work: [https://niche.com](Niche.com)
-[https://www.linkedin.com/in/michaelromay/](LinkedIn)
-[https://synthlibraryportland.com/](SynthLibraryPortland)
-[http://whateverspace.org/](whateverSpace)
+[My super cool dev site](https://michaelromay.dev)
+Where I work: [Niche.com](https://niche.com)
+[LinkedIn](https://www.linkedin.com/in/michaelromay)
+[SynthLibraryPortland](https://synthlibraryportland.com)
+[whateverSpace](http://whateverspace.org)
