@@ -25,6 +25,15 @@ To update image snapshots run this: `npx playwright test --update-snapshots`
 
 Note: any screenshots you make in headed vs headless mode will have conflicts when comparing them back. It's typically best practice to run all your screenshot tests in headless mode.
 
+### Optional Workshop Tasks
+
+- Go to [this form](https://forms.gle/qZhJr2wH6ixwovbS6), fill out your answers, take a screenshot, click submit, `waitForNavigation` and then take another screenshot of the completed page
+- Try adding playwright to one of your apps, use [Playwright Docs](https://playwright.dev/docs/intro)\ to get started
+- Make tests to click on each button and take a screen shot of the background change
+- Make a test that the above with no repeating code
+- Visit any site, find a dropdown, select and option, take a screenshot
+- Visit any site, click through five pages, take a screenshot of each page
+
 ### Helpful links
 
 [Playwright Docs](https://playwright.dev/docs/intro)\
