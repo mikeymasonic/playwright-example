@@ -17,11 +17,11 @@ You will also see any lint errors in the console.
 
 ### `npx playwright test`
 
-### `npx playwright test --update-snapshots`
-
 Launches the playwright test runner in `headless` mode. \
 Open `playwright.config.js` and change `headless: false` to run in 'headed' mode to see browser actions.\
 Alternatively, you can add this flag to your test command `npx playwright test --headed`
+
+To update image snapshots run this: `npx playwright test --update-snapshots`
 
 Note: any screenshots you make in headed vs headless mode will have conflicts when comparing them back. It's typically best practice to run all your screenshot tests in headless mode.
 
