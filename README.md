@@ -6,6 +6,7 @@
 
 copy environment variables from `.env.example` to a new file in your root directory called `.env`\
 run `npm i`
+then run `npx playwright install` to install playwright's supported browsers
 
 ## Available Scripts
 
@@ -14,7 +15,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:4444](http://localhost:4444) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.

@@ -49,7 +49,7 @@ test.describe('main page', () => {
         selectors.appLink({ childNumber: 2}), 
         'href'
         );
-        expect(linkHref).toEqual('https://duckduckgo.com');
+      expect(linkHref).toEqual('https://duckduckgo.com');
     });
 
     test('all links on page have correct urls and text', async ({ page }) => {
@@ -72,6 +72,7 @@ test.describe('main page', () => {
         );
         const content = await element.textContent();
         expect(content).toBe(`${urls[i].text}`);
+
         const linkHref = await page.getAttribute(
           selectors.appLink({ childNumber: urls[i].childNumber}),
           'href'
@@ -94,6 +95,7 @@ test.describe('main page', () => {
         // Clicking the link will indirectly cause a navigation
         page.click(selectors.appLink({ childNumber: 2})), 
       ]);
+
       expect(await page.screenshot()).toMatchSnapshot('duckduck.png');
     });
 
@@ -104,6 +106,7 @@ test.describe('main page', () => {
         // Clicking the link will indirectly cause a navigation
         page.click(selectors.appLink({ childNumber: 4})), 
       ]);
+
       expect(await page.screenshot()).toMatchSnapshot('archiveorg.png');
     });
 
@@ -114,6 +117,7 @@ test.describe('main page', () => {
         // Clicking the link will indirectly cause a navigation
         page.click(selectors.appLink({ childNumber: 4})), 
       ]);
+
       await page.click(selectors.archiveAbout);
       expect(await page.screenshot()).toMatchSnapshot('archiveorgAbout.png');
     });
